@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Gate</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="
+    background-image: url('pexels-aaronmridhaphotography-34650769.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+">
+
+    <div class="overlay" id="overlay">
+        <h1>Selamat Datang</h1>
+        <p>Untuk Selengkapnya Klik Tombol Dibawah Ini</p>
+
+        <a href="1.html" class="btn" id="startBtn">Mulai</a>
+    </div>
+    
+<script>
+    const overlay = document.getElementById("overlay");
+    const startBtn = document.getElementById("startBtn");
+
+    startBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        overlay.classList.add("hide");
+
+        setTimeout(() => {
+            window.location.href = "1.html";
+        }, 700);
+    });
+</script>
+
+</body>
+</html>
